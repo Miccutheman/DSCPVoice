@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+#app-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+header {
+    background-color: #5a67d8;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#chat-box {
+    width: 100%;
+    flex: 1;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: #e0f7fa;
+    text-align: right;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #d6e4ff;
+    text-align: left;
+    align-self: flex-start;
+}
+
+#input-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+}
+
+#user-icon {
+    background-image: url('/static/user-icon.png'); /* Add a user icon image in the static folder */
+}
+
+#ai-icon {
+    background-image: url('/static/ai-icon.png'); /* Add an AI icon image in the static folder */
+}
+
+.icon-speaking {
+    animation: speaking 1s infinite;
+}
+
+@keyframes speaking {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+#speak-button {
+    width: 100px;
+    padding: 15px;
+    background-color: #5a67d8;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+#speak-button:hover {
+    background-color: #434aa8;
+}
