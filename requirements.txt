@@ -52,3 +52,5 @@ Werkzeug==3.0.1
 xgboost==2.0.3
 yarl==1.9.4
 zipp==3.17.0
+gunicorn==20.1.0
+
