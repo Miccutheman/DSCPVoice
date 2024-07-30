@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     speakButton.addEventListener('click', function() {
         if (!initialPromptGiven) {
             // Give the initial prompt only once
-            const initialPrompt = "Please provide the patient's details including age, gender, number of transfusions, anesthesia type, surgical risk category, presence of congestive heart failure, and diabetes status.";
+            const initialPrompt = "Please provide the patient's details including age, gender, transfusion details, RDW level, insulin-requiring diabetes mellitus, and grade of kidney disease.";
             addMessageToChatBox(initialPrompt, 'bot');
             speak(initialPrompt);
             initialPromptGiven = true; // Set the flag to true after the initial prompt
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Initial prompt to guide the user
-    const initialPrompt = "Please provide the patient's details including age, gender, number of transfusions, anesthesia type, surgical risk category, presence of congestive heart failure, and diabetes status.";
+    const initialPrompt = "Please provide the patient's details including age, gender, transfusion details, RDW level, insulin-requiring diabetes mellitus, and grade of kidney disease.";
     addMessageToChatBox(initialPrompt, 'bot');
     speak(initialPrompt);
     initialPromptGiven = true; // Set the flag to true after the initial prompt
